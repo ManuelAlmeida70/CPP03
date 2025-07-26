@@ -2,7 +2,7 @@
 # define CLAPTRAP_HPP
 
 #include <string>
-
+  
 class ClapTrap
 {
 private:
@@ -16,20 +16,22 @@ public:
     ClapTrap(const ClapTrap& copy);
     ~ClapTrap();
 
-    ClapTrap operator=(const ClapTrap& other);
+    ClapTrap& operator=(const ClapTrap& other);
 
     void attack(const std::string& target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
 
     std::string getName() const;
-    void setName(std::string name);
-    int getPoint() const;
-    void setPoint(int point);
-    int getEnergy() const;
-    void setEnergy(int energy);
-    int getAttack() const;
-    void setAttack(int attack);
+    void setName(const std::string& name);
+    int getHitPoint() const;
+    void seHitPoint(int point);
+    int getEnergyPoint() const;
+    void setEnergyPoint(int energy);
+    int getAttackDamage() const;
+    void setAttackDamage(int attack);
 };
+
+void printClapTrap(const ClapTrap& ClapTrap);
 
 #endif
