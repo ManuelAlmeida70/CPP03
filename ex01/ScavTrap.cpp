@@ -17,3 +17,17 @@ ScavTrap::ScavTrap(std::string& name) : ClapTrap(name)
     _attackDamage = 30;
     std::cout << "ScavTrap initializator constructor called by " << name << std::endl;
 }
+
+ScavTrap::ScavTrap(const ScavTrap& copy) : ClapTrap(copy)
+{
+
+}
+
+ScavTrap& ScavTrap::operator=(const ScavTrap& other)
+{
+    if (this != &other)
+    {
+       ClapTrap::operator=(other);
+    }
+    return *this;
+}
