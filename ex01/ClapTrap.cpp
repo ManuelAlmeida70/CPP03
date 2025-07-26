@@ -3,12 +3,12 @@
 #include <iostream>
 
 ClapTrap::ClapTrap(){
-    std::cout << "Default constructor called by " << std::endl;
+    std::cout << "ClapTrap constructor called by " << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoint(10), _energyPoint(10), _attackDamage(0)
 {
-    std::cout << "Initializator constructor called by " << _name << std::endl;
+    std::cout << "ClapTrap initializator constructor called by " << _name << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& copy)
@@ -119,14 +119,4 @@ void ClapTrap::setHitPoint(int point)
 ClapTrap::~ClapTrap()
 {
     std::cout << "Destructor called by " << _name << std::endl;
-}
-
-void printClapTrap(const ClapTrap& clapTrap)
-{
-    std::cout << "==================ClapTrap Information==================" << std::endl;
-    std::cout << "Name: " << clapTrap.getName() << std::endl;
-    std::cout << "Hit Points: " << clapTrap.getHitPoint() << std::endl;
-    std::cout << "Energy Points: " << clapTrap.getEnergyPoint() << std::endl;
-    std::cout << "Attack Damage: " << clapTrap.getAttackDamage() << std::endl;
-    std::cout << "========================================================" << std::endl;
 }

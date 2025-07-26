@@ -25,7 +25,7 @@ public:
     std::string getName() const;
     void setName(const std::string& name);
     int getHitPoint() const;
-    void seHitPoint(int point);
+    void setHitPoint(int point);
     int getEnergyPoint() const;
     void setEnergyPoint(int energy);
     int getAttackDamage() const;
