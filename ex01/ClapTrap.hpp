@@ -33,4 +33,6 @@ class ClapTrap
         unsigned _attackDamage;
 };
 
+void printClapTrap(const ClapTrap& ClapTrap);
+
 #endif

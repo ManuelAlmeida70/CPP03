@@ -120,3 +120,14 @@ ClapTrap::~ClapTrap()
 {
     std::cout << "Destructor called by " << _name << std::endl;
 }
+
+
+void printClapTrap(const ClapTrap& clapTrap)
+{
+    std::cout << "==================ClapTrap Information==================" << std::endl;
+    std::cout << "Name: " << clapTrap.getName() << std::endl;
+    std::cout << "Hit Points: " << clapTrap.getHitPoint() << std::endl;
+    std::cout << "Energy Points: " << clapTrap.getEnergyPoint() << std::endl;
+    std::cout << "Attack Damage: " << clapTrap.getAttackDamage() << std::endl;
+    std::cout << "========================================================" << std::endl;
+}
