@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 
 #include "ScavTrap.hpp"
@@ -46,4 +47,10 @@ void ScavTrap::attack(const std::string& target)
 void ScavTrap::guardGate()
 {
     std::cout << "ClapTrap " << _name << " is now in gate keeper mode" << std::endl;
+}
+
+
+ScavTrap::~ScavTrap()
+{
+    std::cout << "ClapTrap destructor calleb by " << _name << std::endl;
 }
