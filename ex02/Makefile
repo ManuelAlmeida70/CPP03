@@ -1,14 +1,14 @@
-NAME		= serenaMyLove
+NAME		= fight
 
 CXX			= c++
 
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-SRCS		= ClapTrap.cpp ScavTrap.cpp main.cpp
+SRCS		= ClapTrap.cpp ScavTrap.cpp FragTrap.cpp main.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
-INCLUDE		= ClapTrap.hpp ScavTrap.hpp
+INCLUDE		= ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 
 all: $(NAME)
 

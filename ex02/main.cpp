@@ -1,5 +1,5 @@
 #include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 #include <iostream>
 
@@ -9,7 +9,7 @@ int main()
     ClapTrap naruto("Naruto");
     printClapTrap(naruto);
 
-    ScavTrap pain("Pain");
+    FragTrap pain("Pain");
     
     pain.setHitPoint(2);
     printClapTrap(pain);
@@ -20,6 +20,6 @@ int main()
         pain.attack(naruto.getName());
         printClapTrap(pain);
     }
-    pain.guardGate();
+    pain.highFivesGuys();
     printClapTrap(naruto);
 }
