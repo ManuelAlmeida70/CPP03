@@ -54,3 +54,7 @@ void FragTrap::highFivesGuys(void)
 }
 
 
+FragTrap::~FragTrap()
+{
+    std::cout << "FragTrap destructor called" << std::endl;
+}
