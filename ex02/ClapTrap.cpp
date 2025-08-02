@@ -41,17 +41,17 @@ void ClapTrap::attack(const std::string& target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-    if (_attackDamage < amount)
+    if (_hitPoint < amount)
     {
-        std::cout << "ClapTrap " << _name << "cannot take attack damage of " << amount << std::endl;
+        std::cout << "ClapTrap " << _name << " cannot take attack damage of " << amount << std::endl;
         return ;
     }
-    _attackDamage -= amount;
+    _hitPoint -= amount;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-    if (_energyPoint == 0)
+    if (_energyPoint == 0 || _hitPoint == 0)
     {
         std::cout << "ClapTrap: " << _name << " has not life" << std::endl;
         return ;
