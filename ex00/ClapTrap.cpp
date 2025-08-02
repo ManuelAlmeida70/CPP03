@@ -36,7 +36,7 @@ void ClapTrap::attack(const std::string& target)
         return ;
     }
     std::cout << "ClapTrap " << _name << " attacks " << target << " causing " << _attackDamage << " points of damage!" << std::endl;
-    _hitPoint -=1;
+    _energyPoint -=1;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
