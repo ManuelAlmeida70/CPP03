@@ -13,12 +13,13 @@ int main()
     pain.setHitPoint(2);
     printClapTrap(pain);
     pain.beRepaired(0);
+    pain.takeDamage(-2000);
     printClapTrap(pain);
-    for(int i = 0; i < 11; i++)
+    for(int i = 0; i < 2; i++)
     {
         pain.attack(naruto.getName());
         printClapTrap(pain);
     }
-   
-    printClapTrap(naruto);
+    pain.takeDamage(2000);
+    printClapTrap(pain);
 }

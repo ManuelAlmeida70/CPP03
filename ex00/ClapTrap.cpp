@@ -41,12 +41,21 @@ void ClapTrap::attack(const std::string& target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-    if (_attackDamage < amount)
+    if (_hitPoint == 0)
     {
-        std::cout << "ClapTrap " << _name << "cannot take attack damage of " << amount << std::endl;
+        std::cout << "ClapTrap " << _name << " is already destroyed and cannot take more damage!!!" << std::endl;
         return ;
     }
-    _attackDamage -= amount;
+    if (amount > 2147483647)
+    {
+        std::cout << "ClapTrap: " << _name << " cannot attack with negative amount!" << std::endl;
+        return;
+    }
+    if (amount >= _hitPoint) _hitPoint = 0;
+    else  _hitPoint -= amount;
+
+    std::cout << "ClapTrap " << _name << " takes " << amount << " points of damage!!!" << std::endl;
+
 }
 
 void ClapTrap::beRepaired(unsigned int amount)

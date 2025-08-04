@@ -37,20 +37,20 @@ void ScavTrap::attack(const std::string& target)
 {
      if (_hitPoint == 0 || _energyPoint == 0)
     {
-        std::cout << "ClapTrap " << _name << " cannot attack: not hit point or energy point" << std::endl;
+        std::cout << "ScavTrap " << _name << " cannot attack: not hit point or energy point" << std::endl;
         return ;
     }
-    std::cout << "ClapTrap " << _name << " attacks " << target << " causing " << _attackDamage << " points of damage!" << std::endl;
+    std::cout << "ScavTrap " << _name << " attacks " << target << " causing " << _attackDamage << " points of damage!" << std::endl;
     _energyPoint -=1;
 }
 
 void ScavTrap::guardGate()
 {
-    std::cout << "ClapTrap " << _name << " is now in gate keeper mode" << std::endl;
+    std::cout << "ScavTrap " << _name << " is now in gate keeper mode" << std::endl;
 }
 
 
 ScavTrap::~ScavTrap()
 {
-    std::cout << "ClapTrap destructor calleb by " << _name << std::endl;
+    std::cout << "ScavTrap destructor calleb by " << _name << std::endl;
 }

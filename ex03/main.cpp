@@ -18,7 +18,7 @@ int main()
     
     // Test basic functionality
     std::cout << "\n\n\n--- Testing basic functionality ---" << std::endl;
-    diamond.attack("target");
+    diamond.attack("Naruto");
     printClapTrap(diamond);
     diamond.takeDamage(30);
     diamond.beRepaired(20);
